@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maico Presente - Photography</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH304Q0YSG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-TH304Q0YSG');
+  </script>
+</head>
+
+<body data-page="contact">
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <a class="site-brand" href="index.html" aria-label="home">
+      <img src="assets/logo.webp" alt="Maico Presente Photography" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="site-nav" aria-label="menu">
+      <a href="index.html" class="nav-link" data-nav="home">home</a>
+      <a href="gallery.html" class="nav-link" data-nav="gallery">gallery</a>
+      <a href="contact.html" class="nav-link" data-nav="contact">contact</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="social-link social-link--instagram" href="https://www.instagram.com/maico.presente/" target="_blank" rel="noopener" aria-label="instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+      </a>
+
+      <button class="menu-toggle" type="button" data-js="menuToggle" aria-label="menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <a class="site-brand" href="index.html" aria-label="home">
+        <img src="assets/logo.webp" alt="Maico Presente Photography" />
+      </a>
+
+      <button class="mobile-menu__close" type="button" data-js="menuClose" aria-label="close">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6L18 18M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="menu">
+      <a href="index.html" class="mobile-link" data-nav="home">home</a>
+      <a href="gallery.html" class="mobile-link" data-nav="gallery">gallery</a>
+      <a href="contact.html" class="mobile-link" data-nav="contact">contact</a>
+    </nav>
+
+    <div class="mobile-menu__bottom">
+      <a class="social-link social-link--instagram" href="https://www.instagram.com/maico.presente/" target="_blank" rel="noopener" aria-label="instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <main class="page page--contact" role="main" aria-label="contact">
+    <div class="contact-wrap">
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        data-web3forms
+      >
+        <input type="hidden" name="access_key" value="72192896-6dc2-46d7-8efc-614b6c5f1c92" />
+        <input type="hidden" name="subject" value="New message from mpresente.ch" />
+        <!-- Honeypot (optional). Muss unsichtbar sein. -->
+        <input type="checkbox" name="botcheck" class="contact-botcheck" tabindex="-1" autocomplete="off" />
+
+        <label class="contact-label" for="name">
+          your name <span class="contact-required">(required)</span>
+        </label>
+        <input class="contact-input" id="name" name="name" type="text" required />
+
+        <label class="contact-label" for="email">
+          your e-mail <span class="contact-required">(required)</span>
+        </label>
+        <input class="contact-input" id="email" name="email" type="email" required />
+
+        <label class="contact-label" for="message">
+          your message <span class="contact-required">(required)</span>
+        </label>
+        <textarea class="contact-textarea" id="message" name="message" required></textarea>
+
+        <button class="contact-submit" type="submit">send</button>
+
+        <p class="contact-status" id="contactStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
